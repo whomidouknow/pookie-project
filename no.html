@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait... what? 🥺</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #8fb87a; /* A slightly darker, "sadder" green */
+            --text-color: #FFFFFF;
+            --accent: #E06666;
+        }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center; overflow: hidden;
+            position: relative;
+        }
+
+        /* --- THE MESSAGE --- */
+        .msg-container {
+            z-index: 10;
+            padding: 20px;
+            max-width: 500px;
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(-1deg); }
+            100% { transform: rotate(1deg); }
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        /* --- THE BUTTON --- */
+        .back-btn {
+            background-color: white;
+            color: var(--accent);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        /* --- DECORATIONS (Sad Emojis) --- */
+        .decor {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.5;
+            animation: fall linear forwards;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="msg-container">
+        <h1>Wait, why did you say no? 🥺</h1>
+        <p>That's not how this works! <br> Go back and say yes because... <br> <strong>You are mine! ❤️</strong></p>
+        
+        <a href="index.html" class="back-btn">Okay, fine! 💖</a>
+    </div>
+
+    <script>
+        const emojis = ['🥀', '☁️', '🌧️', '🥺', '💔', '🩹'];
+        
+        function createSadness() {
+            const div = document.createElement('div');
+            div.className = 'decor';
+            div.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.top = '-50px';
+            div.style.fontSize = Math.random() * 20 + 20 + 'px';
+            div.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(div);
+            
+            setTimeout(() => div.remove(), 5000);
+        }
+
+        setInterval(createSadness, 300);
+    </script>
+</body>
+</html>

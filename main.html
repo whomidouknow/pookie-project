@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #A9D18E; /* Your signature light green */
+            --accent-pink: #FF4D6D;
+            --btn-text: #E06666;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .main-card {
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            padding: 30px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* THE TEXT BLOCK */
+        .message-content {
+            color: white;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 0.2px;
+            /* Added a subtle glow to make white text easier to read on green */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* ILLUSTRATION PLACEHOLDER */
+        .image-box {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .image-box img {
+            max-width: 150px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* FINAL QUESTION */
+        .final-question {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* BUTTON BAR */
+        .button-bar {
+            background-color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .btn {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--btn-text);
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-no {
+            color: #999;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        
+        <div class="message-content">
+            ma'am this is going to be the last question, I haven't used anything to know this answer, so the answer is only be known by you, you have lot of time to think whether you want to accept it or not, my feelings are not going anywhere atleast for next few months, you might be quite cheerful or happy rn, I want you to think about it when you are not that happy and decide whether you want to be mine or not, so when you want to accept my proposal just come again and say yes and send the screenshot to me of next page which is going to come after you click yes, I want to see that, and I am already yours so you don't need to be hasty
+        </div>
+
+        <h1 class="final-question">Will you be mine? ❤️</h1>
+
+        <div class="button-bar">
+            <a href="happy.html" class="btn">Yes! 💖</a>
+            
+            <a href="no.html" class="btn btn-no">No 🥺</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
